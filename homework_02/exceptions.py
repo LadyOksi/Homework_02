@@ -4,14 +4,11 @@
 - NotEnoughFuel
 - CargoOverload
 """
-from dataclasses import dataclass
+class LowFuelError(Exception):
+    pass
 
-class Engine():
-    def __init__(self, volume, pistons):
-        self.volume = volume
-        self.pistons = pistons
+class NotEnoughFuel(Exception):
+    pass
 
-@dataclass
-class Engine:
-    volume: int
-    pistons: int
+class CargoOverload(Exception):
+    pass
