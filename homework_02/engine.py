@@ -1,9 +1,14 @@
 """
 create dataclass `Engine`
 """
-class LowFuelError(Exception):
-    pass
-class NotEnoughFuel(Exception):
-    pass
-class CargoOverload(Exception):
-    pass
+from dataclasses import dataclass
+
+class Engine():
+    def __init__(self, volume, pistons):
+        self.volume = volume
+        self.pistons = pistons
+
+@dataclass
+class Engine:
+    volume: int
+    pistons: int
